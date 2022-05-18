@@ -4,8 +4,7 @@ export default function Header() {
   return (
     <div className="header">
       <div className="headerTitles d-flex flex-column align-items-center">
-        <span className="headerTitleSm">React Blog App</span>
-        <span className="headerTitleLg">BLOG</span>
+        <span className="headerTitleSm">BLOG</span>
       </div>
       <img
         className="headerImg"

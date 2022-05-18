@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import "./sidebar.css";
 export default function Sidebar() {
   return (
     <div className="sidebar">
@@ -9,10 +9,7 @@ export default function Sidebar() {
           src="https://photo-cms-sggp.zadn.vn/w580/Uploaded/2022/dqmbbcvo/2022_01_20/lionelmessi_pzli.jpeg"
           alt=""
         />
-        <p>
-          Laboris sunt aute cupidatat velit magna velit ullamco dolore mollit
-          amet ex esse.Sunt eu ut nostrud id quis proident.
-        </p>
+        <p>Ronaldo cũng có tuổi ấy nhưng mà tuổi con ngan con. ok ?</p>
       </div>
       <div className="sidebarItem">
         <span className="sidebarTitle">CATEGORIES</span>
@@ -52,7 +49,13 @@ export default function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle">FOLLOW US</span>
         <div className="sidebarSocial">
-          <i className="sidebarIcon fab fa-facebook-square" />
+          <Link
+            to={{ pathname: "https://www.facebook.com/duclapulga/" }}
+            target="_blank"
+            style={{ color: "rgb(90, 146, 197)" }}
+          >
+            <i className="sidebarIcon fab fa-facebook-square" />
+          </Link>
           <i className="sidebarIcon fab fa-instagram-square" />
           <i className="sidebarIcon fab fa-pinterest-square" />
           <i className="sidebarIcon fab fa-twitter-square" />

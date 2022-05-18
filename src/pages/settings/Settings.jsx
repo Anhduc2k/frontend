@@ -1,4 +1,4 @@
-import Sidebar from "../../components/sidebar/SideBar";
+import Sidebar from "../../components/sidebar/Sidebar";
 import "./settings.css";
 
 export default function Settings() {
@@ -27,9 +27,9 @@ export default function Settings() {
             />
           </div>
           <label>Username</label>
-          <input type="text" placeholder="Safak" name="name" />
+          <input type="text" placeholder="EngGer" name="name" />
           <label>Email</label>
-          <input type="email" placeholder="safak@gmail.com" name="email" />
+          <input type="email" placeholder="duclapulga@gmail.com" name="email" />
           <label>Password</label>
           <input type="password" placeholder="Password" name="password" />
           <button
