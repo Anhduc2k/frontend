@@ -5,7 +5,7 @@ import Settings from "./pages/settings/Settings";
 import Single from "./pages/single/Single";
 import Write from "./pages/write/Write";
 import Topbar from "./components/topbar/TopBar";
-import Homepage from "./pages/homepage/Homepage";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
@@ -13,10 +13,10 @@ function App() {
       <Topbar />
       <Switch>
         <Route exact path="/">
-          <Homepage />
+          <Home />
         </Route>
         <Route path="/posts">
-          <Homepage />
+          <Home />
         </Route>
         <Route path="/post/:id">
           <Single />
