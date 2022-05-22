@@ -7,7 +7,7 @@ export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
-  const resourceImgae = "http://localhost:5000/images/";
+  const resourceImage = "http://localhost:5000/images/";
   const [title, setTitle] = useState("");
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function SinglePost() {
       <div className="singlePostWrapper">
         {post.photo && (
           <img
-            src={resourceImgae + post.photo}
+            src={resourceImage + post.photo}
             alt=""
             className="singlePostImg"
           />
