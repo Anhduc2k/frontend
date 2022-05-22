@@ -2,10 +2,12 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./singlePost.css";
+import { Context } from "../../context/Context";
 
 export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
+  const { user } = useContext(Context);
   const [post, setPost] = useState({});
   const resourceImage = "http://localhost:5000/images/";
   const [title, setTitle] = useState("");
@@ -18,6 +20,15 @@ export default function SinglePost() {
     };
     getPost();
   }, [path]);
+
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`/posts/${post._id}`, {
+        data: { username: user.username },
+      });
+      window.location.replace("/");
+    } catch (err) {}
+  };
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
@@ -32,7 +43,10 @@ export default function SinglePost() {
           {post.title}
           <div className="singlePostEdit">
             <i className="singlePostIcon far fa-edit"></i>
-            <i className="singlePostIcon far fa-trash-alt"></i>
+            <i
+              className="singlePostIcon far fa-trash-alt"
+              onClick={handleDelete}
+            ></i>
           </div>
         </h1>
         <div className="singlePostInfo">
